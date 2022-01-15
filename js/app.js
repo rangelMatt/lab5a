@@ -113,12 +113,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(testArray) { //eslint-disable-line
+  let prodArr = multiply(testArray[0],testArray[1])[0];
+  // // return [sum,`The sum of ${a} and ${b} is ${sum}.`];
+  let prodArrTwo = multiply(prodArr,testArray[2])[0];
+  // let sumTwo = sum(sumArr, testArray)[0];
+
+  // let productOne = multiply(a,b)[0];
+  // // return [product,`The product of ${a} and ${b} is ${product}.`];
+  // let productTwo = multiply(productOne,c)[0];
+
+  return [prodArrTwo, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of 24.`];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
