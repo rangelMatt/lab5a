@@ -82,13 +82,23 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(testArray) { //eslint-disable-line
+  let sumArr = sum(testArray[0],testArray[1])[0];
+  // // return [sum,`The sum of ${a} and ${b} is ${sum}.`];
+  let sumArrTwo = sum(sumArr,testArray[2])[0];
+  // let sumTwo = sum(sumArr, testArray)[0];
+
+  // let productOne = multiply(a,b)[0];
+  // // return [product,`The product of ${a} and ${b} is ${product}.`];
+  // let productTwo = multiply(productOne,c)[0];
+
+  return [sumArrTwo, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and 9 is their sum.`];
 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
